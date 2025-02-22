@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --gradient-start: theme('colors.pink.900');
+    --gradient-middle: theme('colors.gray.900');
+    --gradient-end: theme('colors.blue.900');
+  }
+
+  :root.light {
+    --gradient-start: theme('colors.pink.100');
+    --gradient-middle: theme('colors.gray.100');
+    --gradient-end: theme('colors.blue.100');
+  }
+
+  body {
+    @apply min-h-screen;
+    background: linear-gradient(to bottom right, var(--gradient-start), var(--gradient-middle), var(--gradient-end));
+  }
+
+  .light {
+    @apply text-gray-900;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-blue-400;
+  }
+  
+  .glass-card {
+    @apply backdrop-blur-lg rounded-xl border transition-colors;
+  }
+
+  .dark .glass-card {
+    @apply bg-white/10 border-white/20;
+  }
+
+  .light .glass-card {
+    @apply bg-white/60 border-gray-200;
+  }
+  
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-lg;
+  }
+
+  .dark .hover-glow {
+    @apply hover:shadow-pink-500/20;
+  }
+
+  .light .hover-glow {
+    @apply hover:shadow-pink-500/30;
+  }
+}
