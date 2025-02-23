@@ -214,7 +214,7 @@ const Home = () => {
                   </div>
                   <h3 className="text-lg font-medium text-indigo-400">AI-Powered Chat</h3>
                   <p className="mt-2 text-base text-gray-300">
-                    Engage in meaningful conversations with AI-powered movie characters that understand context and personality.
+                    Engage in meaningful conversations with AI-powered movie characters.
                   </p>
                 </div>
               </div>
